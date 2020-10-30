@@ -55,7 +55,7 @@ void print_array(unsigned char *arr, int n);
  *
  * @return return int value equal to median
  */
-double find_median(unsigned char *arr, int n);
+int find_median(unsigned char *arr, int n);
 
 /**
  * @brief find_mean

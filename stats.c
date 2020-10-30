@@ -46,7 +46,7 @@ void main() {
 
 void print_statistics(unsigned char *arr, int n) {
   sort(arr,n);
-  printf("Median is %f\n",find_median(arr,n));
+  printf("Median is %d\n",find_median(arr,n));
   printf("Mean is %d\n",find_mean(arr,n));
   printf("Max is %d\n",find_maximum(arr,n));
   printf("Min is %d\n",find_minimum(arr,n));
@@ -62,7 +62,7 @@ void print_array(unsigned char *arr, int n) {
 }
 
 
-double find_median(unsigned char *arr, int n) {
+int find_median(unsigned char *arr, int n) {
     float val =0.0;
     if (n % 2 != 0) {
         val = arr[n / 2];
@@ -70,7 +70,7 @@ double find_median(unsigned char *arr, int n) {
     }
         
     val = (double)(int)(arr[(n - 1) / 2] + arr[n / 2]) / 2.0;
-    return round(val); 
+    return (int)(val); 
 }
 
 int find_mean(unsigned char *arr, int n){
@@ -80,7 +80,7 @@ int find_mean(unsigned char *arr, int n){
     sum = sum+ (int)arr[i];
   }
   average = (float)sum/n;
-  return round(average);
+  return floor(average);
 }
 
 int find_maximum(unsigned char *arr, int n) {
